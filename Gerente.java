@@ -1,15 +1,22 @@
 public class Gerente extends Funcionario {
 
-    private double bonusf;
+    private double bonus;
 
     public Gerente(String nome, double salarioBase, double bonus) {
-        super(nome, salarioBase)
-        this.bonus = bonus; // ERRO: nome do atributo errado
+        super(nome, salarioBase);
+        this.bonus = bonus;
+    }
+
+    public double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
     }
 
     @Override
     public double calcularPagamentoMensal() {
-        // ERRO: ponto e vírgula dentro da expressão
-        return salarioBase + bonusf;;
+        return salarioBase + bonus;
     }
 }
